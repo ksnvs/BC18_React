@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { TangSoLuongAction } from "./redux/actions/numberAction";
+import { GIAM, TANG } from "./redux/constants/numberConstant";
 class DemoMiniRedux extends Component {
   render() {
     return (
       <div className="container my-5">
         <button
-          onClick={this.props.tangSoLuong}
+          onClick={() => {
+            this.props.tangSoLuong(20);
+          }}
           className="btn btn-success mr-3"
         >
           Tăng
@@ -30,15 +34,12 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    tangSoLuong: () => {
-      dispatch({
-        type: "Tăng",
-        payload: 5,
-      });
+    tangSoLuong: (value) => {
+      dispatch(TangSoLuongAction(value));
     },
     giamSoLuong: () => {
       dispatch({
-        type: "Giảm",
+        type: GIAM,
         payload: 5,
       });
     },
