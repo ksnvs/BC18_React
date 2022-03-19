@@ -5,10 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { rootReducer } from "./DemoMiniRedux/redux/reducer";
+import { rootReducerGioHang } from "./BaiTapGioHangRedux/redux/reducer";
+// import { rootReducer } from "./DemoMiniRedux/redux/reducer";
 
 let store = createStore(
-  rootReducer,
+  rootReducerGioHang,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 ReactDOM.render(

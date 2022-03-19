@@ -16,6 +16,7 @@ import BaiTapGioHang from "./BaiTapGioHang/BaiTapGioHang";
 import ToChucLayOut from "./ToChucLayOut/ToChucLayOut";
 import BaiTapVongLap from "./BaiTap2/BaiTapVongLap";
 import DemoMiniRedux from "./DemoMiniRedux/DemoMiniRedux";
+import BaiTapGioHangRedux from "./BaiTapGioHangRedux/BaiTapGioHangRedux";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <BaiTapGioHang /> */}
       {/* <ToChucLayOut /> */}
       {/* <BaiTapVongLap /> */}
-      <DemoMiniRedux />
+      {/* <DemoMiniRedux /> */}
+      <BaiTapGioHangRedux />
     </div>
   );
 }
